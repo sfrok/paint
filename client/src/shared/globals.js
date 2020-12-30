@@ -3,6 +3,8 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
   body {
-    color: ${(props) => (props.primaryColor ? "#f6f6f6" : "#ffffff")};
+    background: ${({ primaryColor, theme }) =>
+      primaryColor ? theme.palette.primary : theme.palette.tertiary};
+    box-sizing: border-box;
   }
 `;

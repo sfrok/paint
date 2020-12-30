@@ -42,9 +42,9 @@
     "react-hooks/exhaustive-deps": "warn",
     "react/display-name": 0
   },
+  "parser": "babel-eslint",
   "parserOptions": {
     "sourceType": "module",
-    "parser": "babel-eslint",
     "ecmaVersion": 2018
   },
   "overrides": [
