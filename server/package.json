@@ -1,0 +1,9 @@
+{
+  "name": "server_paint",
+  "version": "1.0.0",
+  "description": "server_paint",
+  "main": "index.js",
+  "author": "Serhii",
+  "license": "MIT",
+  "dependencies": {}
+}
