@@ -19,7 +19,7 @@ export const Canvas = observer(() => {
 
   useEffect(() => {
     canvasState.setCanvas(canvasRef.current);
-    toolState.setTool(new Brush(canvasRef.current));
+    toolState.setTool(new Brush(canvasState.canvas));
   }, [canvasRef]);
 
   return (

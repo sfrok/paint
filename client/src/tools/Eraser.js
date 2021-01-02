@@ -1,7 +1,7 @@
 // Tool Classes
 import { Tool } from "./Tool";
 
-export class Brush extends Tool {
+export class Eraser extends Tool {
   constructor(canvas) {
     super(canvas);
     this.listen();
@@ -29,6 +29,8 @@ export class Brush extends Tool {
   }
 
   draw(x, y) {
+    this.strokeStyle = "white";
+    this.lineWidth = 20;
     this.context.lineTo(x, y);
     this.context.stroke();
   }

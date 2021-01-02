@@ -1,15 +1,15 @@
 // Tool Classes
 import { Tool } from "./Tool";
 
-export class Brush extends Tool {
+export class Line extends Tool {
   constructor(canvas) {
     super(canvas);
     this.listen();
   }
 
   listen() {
-    this.canvas.onmousemove = this.mouseMoveHandler.bind(this);
     this.canvas.onmousedown = this.mouseDownHandler.bind(this);
+    this.canvas.onmousemove = this.mouseMoveHandler.bind(this);
     this.canvas.onmouseup = this.mouseUpHandler.bind(this);
   }
 
@@ -19,17 +19,12 @@ export class Brush extends Tool {
 
   mouseDownHandler(e) {
     this.mouseDown = true;
-    this.context.beginPath();
   }
 
   mouseMoveHandler(e) {
     if (this.mouseDown) {
-      this.draw(e.pageX - e.target.offsetLeft, e.pageY - e.target.offsetTop);
     }
   }
 
-  draw(x, y) {
-    this.context.lineTo(x, y);
-    this.context.stroke();
-  }
+  draw(x, y) {}
 }
