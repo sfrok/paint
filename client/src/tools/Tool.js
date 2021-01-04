@@ -3,8 +3,6 @@ export class Tool {
     this.canvas = canvas;
     this.context = canvas.getContext("2d");
     this.destroyEvents();
-    this.lineWidth = 3;
-    this.strokeStyle = "black";
   }
 
   destroyEvents() {

@@ -29,8 +29,7 @@ export class Eraser extends Tool {
   }
 
   draw(x, y) {
-    this.strokeStyle = "white";
-    this.lineWidth = 20;
+    this.context.strokeStyle = "#ffffff";
     this.context.lineTo(x, y);
     this.context.stroke();
   }

@@ -10,4 +10,7 @@ export const ImageItem = styled.img.attrs(({ image }) => ({
   :hover {
     transform: scale(1.3);
   }
+  :last-child {
+    margin-right: 0;
+  }
 `;

@@ -2,8 +2,10 @@
 import { Tool } from "./Tool";
 
 export class Rectangle extends Tool {
-  constructor(canvas) {
+  constructor(canvas, color) {
     super(canvas);
+    this.context.strokeStyle = color;
+    this.context.fillStyle = color;
     this.listen();
   }
 
