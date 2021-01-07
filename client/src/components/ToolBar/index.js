@@ -77,8 +77,8 @@ export const ToolBar = () => {
           />
         </Column>
         <Column contentPosition="flex-end" width={6}>
-          <ImageItem image={back} />
-          <ImageItem image={forward} />
+          <ImageItem image={back} onClick={() => canvasState.undo()} />
+          <ImageItem image={forward} onClick={() => canvasState.redo()} />
           <ImageItem image={save} />
         </Column>
       </Row>
