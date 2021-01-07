@@ -19,14 +19,23 @@ export const Canvas = observer(() => {
 
   useEffect(() => {
     canvasState.setCanvas(canvasRef.current);
-    toolState.setTool(new Brush(canvasRef.current));
+    toolState.setTool(new Brush(canvasState.canvas));
   }, [canvasRef]);
+
+  const mouseDownHandled = () => {
+    canvasState.pushToUndo(canvasState.canvas.toDataURL());
+  };
 
   return (
     <Container>
       <Row>
         <Column width={12} contentPosition="center">
-          <Area ref={canvasRef} width={800} height={600} />
+          <Area
+            ref={canvasRef}
+            width={800}
+            height={600}
+            onMouseDown={() => mouseDownHandled()}
+          />
         </Column>
       </Row>
     </Container>

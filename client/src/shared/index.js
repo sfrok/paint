@@ -8,3 +8,6 @@ export { GlobalStyle } from "./globals";
 export { Container } from "./Container";
 export { Row } from "./Row";
 export { Column } from "./Column";
+
+// Shareable Components
+export { Palette } from "./components/Palette";

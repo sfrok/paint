@@ -1,11 +1,9 @@
 // Tool Classes
 import { Tool } from "./Tool";
 
-export class Brush extends Tool {
-  constructor(canvas, color) {
+export class Eraser extends Tool {
+  constructor(canvas) {
     super(canvas);
-    this.context.strokeStyle = color;
-    this.context.fillStyle = color;
     this.listen();
   }
 
@@ -31,6 +29,7 @@ export class Brush extends Tool {
   }
 
   draw(x, y) {
+    this.context.strokeStyle = "#ffffff";
     this.context.lineTo(x, y);
     this.context.stroke();
   }

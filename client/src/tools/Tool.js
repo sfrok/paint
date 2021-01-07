@@ -10,4 +10,16 @@ export class Tool {
     this.canvas.onmousedown = null;
     this.canvas.onmouseup = null;
   }
+
+  set lineWidth(size) {
+    this.context.lineWidth = size;
+  }
+
+  set strokeStyle(color) {
+    this.context.strokeStyle = color;
+  }
+
+  set fillStyle(color) {
+    this.context.fillStyle = color;
+  }
 }
