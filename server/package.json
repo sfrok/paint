@@ -2,11 +2,11 @@
   "name": "server_paint",
   "version": "1.0.0",
   "description": "server_paint",
-  "main": "index.js",
+  "main": "src/index.js",
   "author": "Serhii",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon src/index.js",
     "lint": "yarn eslint --ext .js,.ts --fix ..",
     "test": "jest --passWithNoTests",
     "test:watch": "yarn test --watchAll"

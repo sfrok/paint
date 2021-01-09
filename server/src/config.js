@@ -1,12 +1,14 @@
+// Core
 const express = require("express");
 const app = express();
 
+// Define
 const WSServer = require("express-ws")(app);
-
+const aWss = WSServer.getWss();
 const PORT = process.env.PORT || 5000;
 
-app.ws("/", (ws, req) => {
-  console.log("Connected");
-});
-
-app.listen(PORT, () => console.log(`SERVER START, PORT: ${PORT}`));
+module.exports = {
+  app,
+  PORT,
+  aWss,
+};
