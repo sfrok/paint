@@ -9,7 +9,7 @@ app.ws("/", (ws, req) => {
 
   ws.on("message", (msg) => {
     const msgToJson = JSON.parse(msg);
-    switch (data.method) {
+    switch (msgToJson.method) {
       case "connection": {
         connectionHandler(ws, msgToJson);
         break;
